@@ -22,7 +22,7 @@ nav{
     margin: 0 0 10px 0;
     justify-content: space-between;
 }
-.nav-links .mobile-btns{
+.nav-links .mobile-btns-row{
     display: none;
 }
 .burger{
@@ -57,6 +57,81 @@ nav{
 
 .nav-links a:hover{
     color:hsl(0, 0%, 8%);
+}
+
+li.company-tab, li.features-tab{
+  position: relative;
+}
+
+.company-tab::before, .features-tab::before{
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 16px;
+  width:5px;
+  height: 2px;
+  background-color: hsl(0, 0%, 41%);
+  transform: rotate(40deg);
+}
+
+.company-tab::after, .features-tab::after{
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  width:5px;
+  height: 2px;
+  background-color: hsl(0, 0%, 41%);
+  transform: rotate(-40deg);
+}
+.company-tab.active::before, .features-tab.active::before{
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  width:5px;
+  height: 2px;
+  background-color: hsl(0, 0%, 41%);
+  transform: rotate(40deg);
+}
+
+.company-tab.active::after, .features-tab.active::after{
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 16px;
+  width:5px;
+  height: 2px;
+  background-color: hsl(0, 0%, 41%);
+  transform: rotate(-40deg);
+}
+
+.options-features{
+  display: none;
+}
+
+.options-features.active {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(100,100,111, 0.2) 0px 7px 29px 0px;
+  z-index: 2;
+
+}
+
+.option {
+  display: flex;
+  padding: 10px 5px;
+  font-size: 13px;
+  align-items: center;
+}
+.feature-icon{
+  margin-right: 13px;
+  font-size: 18px;
 }
 
 .right-items-nav{
@@ -323,6 +398,19 @@ nav{
     transform: rotate(45deg) translate(-5px, 0);
   }
 
+  .options-features {
+    display: none;
+  }
+  .options-features.active {
+    display: block;
+    position: relative;
+    top: 8px;
+    left: 3px;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: none;
+    z-index: 2;
+  }
 
   @keyframes navLinkFade {
     from{
@@ -335,4 +423,6 @@ nav{
     }
     
   }
+
+
 }
