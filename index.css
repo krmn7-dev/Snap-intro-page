@@ -22,6 +22,22 @@ nav{
     margin: 0 0 10px 0;
     justify-content: space-between;
 }
+.nav-links .mobile-btns{
+    display: none;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.navbar-shadow{
+  display: none;
+}
 .navbar-tabs-container{
     display: flex;
     justify-content: space-between;
@@ -159,7 +175,7 @@ nav{
 
 @media (max-width: 600px){
   body{
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .container{
     display: flex;
@@ -207,5 +223,105 @@ nav{
   .icon{
     width: 80%;
   }
+
+  nav{
+    padding: 10px 15px;
+  }
+  .left-items-nav{
+    height: 40px;
+  }
+  .logo-img{
+    margin-top: 10px;
+  }
+  .right-items-nav{
+    padding-bottom: 0;
+  }
+
+  .nav-links{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 91vh;
+    z-index: 3;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 20px 10px 20px;
+    align-items: start;
+    justify-content: space-between;
+    width: 58%;
+    transform: translateX(98%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .navbar-tabs-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    z-index: 4;
+    margin-bottom: 25px;
+  }
+  .nav-links a{
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .mobile-btns-row{
+    width: 100%;
+    margin: 0 auto 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+   
+  }
+  .mobile-btns-row .login-btn{
+    margin: 20px;
+  }
+  .mobile-btns-row .login-btn, .mobile-btns-row .register-btn{
+    font-size: 14px;
+  }
+  .right-items-nav{
+    justify-content: end;
+  }
+  .right-items-nav .login-btn, .right-items-nav .register-btn{
+    display: none;
+  }
+  .burger{
+    display: block;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .nav-active{
+    transform: translateX(0px);
+  }
+
+  .navbar-shadow-active{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:2;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  .burger-active .line1{
+    transform: rotate(-45deg) translate(-5px, 0);
+  }
+  .burger-active .line2 {
+    display: none;
+    transition: ease-in-out 0.3s;
+  }
+  .burger-active .line3{
+    transform: rotate(45deg) translate(-5px, 0);
+  }
+
 
 }
