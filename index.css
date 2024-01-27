@@ -361,6 +361,9 @@ li.company-tab, li.features-tab{
     font-size: 16px;
     font-weight: 700;
   }
+  .nav-links .mobile-btns-row{
+    display: flex;
+  }
   .mobile-btns-row{
     width: 100%;
     margin: 0 auto 5px auto;
